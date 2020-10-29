@@ -76,6 +76,8 @@ theft=hourspayrate0.800
 print("Your estimated weekly paycheck is : $",theft)
 print("Your estimated monthly paycheck amount is : $",theftmonth_size)
 
+##This amount only assumes taxes, not 401k or split checks
+
 ############################################
 #possible if, elif for amnt over or under budget
 
