@@ -78,7 +78,7 @@ def write_to_weekly_file(date, names, fees, weeks):
     while True:
         # @catch & @display
         try:
-            catcher = str(date(date.len()))
+            catcher = str(date(len(date)))
         except ValueError:
             failed1 = Label (frame, text = "The submitted date is invalid.  Please enter a valid date and try again.")
             break
@@ -88,7 +88,7 @@ def write_to_weekly_file(date, names, fees, weeks):
     while True:
         # @catch & @display
         try:
-            catcher = str(names(names.len()))
+            catcher = str(names(len(names))
         except ValueError:
             failed2 = Label (frame, text = "The submitted subscription name is invalid.  Please enter a valid title and try again.")
             break
@@ -98,7 +98,7 @@ def write_to_weekly_file(date, names, fees, weeks):
     while True:
         # @catch & @display
         try:
-            catcher = float(fees(fees.len()))
+            catcher = float(fees(len(fees)))
         except ValueError:
             failed3 = Label (frame, text = "The submitted cost is invalid.  Please enter a valid number and try again.")
         else:
@@ -123,7 +123,7 @@ def write_to_weekly_file(date, names, fees, weeks):
     # ... subtract 1 from it becuase we do the designation with a \n
     entry_count -= 1
     
-    f_apply.append("Week expense #", entry_count, "is name:", names[names.len()], "fees:", fees[fees.len()])
+    f_apply.append("Week expense #", entry_count, "is name:", names(len(names)), "fees:", fees(len(fees)))
     
     #2. write to @master file. @master is for debugging purposes!
     f_apply.close()
@@ -203,7 +203,7 @@ def write_to_weekly_file(date, names, fees):
     while True:
         # @catch & @display
         try:
-            catcher = str(date(date.len()))
+            catcher = str(date(len(date))
         except ValueError:
             failed0 = Label (frame, text = "The submitted due date is invalid.  Please enter a valid date and try again.")
         else:
@@ -212,7 +212,7 @@ def write_to_weekly_file(date, names, fees):
     while True:
         # @catch & @display
         try:
-            catcher = str(names(names.len()))
+            catcher = str(names(len(names))
         except ValueError:
             failed1 = Label (frame, text = "The submitted subscription name is invalid.  Please enter a valid title and try again.")
         else:
@@ -221,7 +221,7 @@ def write_to_weekly_file(date, names, fees):
     while True:
         # @catch & @display
         try:
-            catcher = float(fees(fees.len()))
+            catcher = float(fees(len(fees))
         except ValueError:
             failed2 = Label (frame, text = "The submitted cost is invalid.  Please enter a valid number and try again.")
         else:
@@ -249,7 +249,7 @@ def write_to_weekly_file(date, names, fees):
     if entry_count <= 0:
         entry_count = 1
     
-    f_apply.append("Monthly expense #", entry_count, "is date:", date[date.len()], "name:", [names.len()], "fees:", [fees.len()])
+    f_apply.append("Monthly expense #", entry_count, "is date:", date(len(date)), "name:", date(len(date)), "fees:", len(fees))
     
     #2. write to @master file. @master is for debugging purposes!
     f_apply.close()
@@ -317,7 +317,7 @@ def get_paycheck(hours, payrate):
     
     while True:
         try:
-            hours=float(hours(hours.len())
+            hours=float(hours(len(hours)))
         except ValueError:
             print("The submitted work hours is invalid.  Please enter a valid number of hours and try again.")
         else:
@@ -325,7 +325,7 @@ def get_paycheck(hours, payrate):
 
     while True:
         try:
-            payrate=float(payrate(payrate.len())
+            payrate=float(payrate(len(payrate)))
         except ValueError:
             print("The submitted pay rate is invalid.  Please enter a valid rate and try again.")
         else:
@@ -356,7 +356,7 @@ def get_paycheck(hours, payrate):
     if entry_count <= 0:
         entry_count = 1
     
-    f_apply.append("Paycheck #", entry_count, "is hours:", hours[hours.len()], "and payrate:", payrate[payrate.len()])
+    f_apply.append("Paycheck #", entry_count, "is hours:", hours(len(hours)), "and payrate:", payrate(len(payrate)))
     
     ####################### calculate paycheck #############################
     
